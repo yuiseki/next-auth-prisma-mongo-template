@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Demo of next-auth-prisma-mongo-template</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
