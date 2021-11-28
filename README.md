@@ -1,33 +1,24 @@
-# NextJS Typescript Boilerplate
+# Template of Next.js + NextAuth.js + Prisma MongoDB
 
-Bootstrap a developer-friendly NextJS app configured with:
+## What is this
 
-- [Typescript](https://www.typescriptlang.org/)
-- Linting with [ESLint](https://eslint.org/)
-- Formatting with [Prettier](https://prettier.io/)
-- Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
-- Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
+The minimum Next.js template repository implemented Authentication and Persistence in MongoDB using NextAuth.js and Prisma.
 
-## Preview
+## How to use it
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+- Fork this project.
+- `cp .env.sample .env` and Edit it.
+  - Hint: You can generate `NEXTAUTH_SECRET` value via `openssl rand -base64 32` command. https://next-auth.js.org/configuration/options#secret
+  - This template has implemented only Twitter provider authentication, So you should get Twitter Client ID and Client Secret at Twitter Developer Portal, But you can use other soo many providers that support NextAuth.js if you want. https://next-auth.js.org/providers/overview
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest)
+Run following commands:
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest&project-name=with-typescript-eslint-jest&repository-name=with-typescript-eslint-jest)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-# or
-yarn create next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
+```
+npm ci
+npm i -g prisma
+prisma generate
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Notice
+
+We don't need `prisma migrate` command because we are riding on the MongoDB!
