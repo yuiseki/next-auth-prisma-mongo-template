@@ -11,7 +11,9 @@ export const UserIconList = () => {
   return (
     <div style={{ margin: '5px 0' }}>
       {data.map((user) => {
-        return <img key={user.id} src={user.image} height={'40px'} />
+        return (
+          <img alt={user.name} key={user.id} src={user.image} height={'40px'} />
+        )
       })}
     </div>
   )
