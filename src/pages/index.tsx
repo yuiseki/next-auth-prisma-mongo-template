@@ -21,7 +21,7 @@ const Home: NextPage = () => {
               Signed in as {session.user.name} <br />
               <button
                 onClick={() => {
-                  signOut
+                  signOut()
                 }}
               >
                 Sign out
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
               Not signed in <br />
               <button
                 onClick={() => {
-                  signIn
+                  signIn()
                 }}
               >
                 Sign in
