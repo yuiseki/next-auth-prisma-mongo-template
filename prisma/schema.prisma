@@ -9,6 +9,8 @@ generator client {
 }
 
 model User {
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
   id            String    @id @default(dbgenerated()) @map("_id") @db.ObjectId
   name          String?
   email         String?   @unique
@@ -19,6 +21,8 @@ model User {
 }
 
 model Account {
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
   id                 String  @id @default(dbgenerated()) @map("_id") @db.ObjectId
   userId             String
   type               String
@@ -40,6 +44,8 @@ model Account {
 }
 
 model Session {
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
   id           String   @id @default(dbgenerated()) @map("_id") @db.ObjectId
   sessionToken String   @unique
   userId       String
@@ -48,6 +54,8 @@ model Session {
 }
 
 model VerificationToken {
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
   id         String    @id @default(dbgenerated()) @map("_id") @db.ObjectId
   identifier String
   token      String   @unique
