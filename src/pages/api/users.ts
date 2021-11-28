@@ -2,17 +2,16 @@
 
 import { NextApiRequest, NextApiResponse } from 'next'
 import { PrismaClient } from '@prisma/client'
-
 const prisma = new PrismaClient()
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  const user = await prisma.user.findMany({
+  const users = await prisma.user.findMany({
     take: 100,
     orderBy: {
       updatedAt: 'desc',
     },
   })
-  res.status(200).json(user)
+  res.status(200).json(users)
 }
 
 export default handler
