@@ -12,7 +12,13 @@ export const UserIconList = () => {
     <div style={{ margin: '5px 0' }}>
       {data.map((user) => {
         return (
-          <img alt={user.name} key={user.id} src={user.image} height={'40px'} />
+          <img
+            alt={user.name}
+            title={user.name}
+            key={user.id}
+            src={user.image}
+            height={'40px'}
+          />
         )
       })}
     </div>
