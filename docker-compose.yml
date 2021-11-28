@@ -3,8 +3,6 @@ services:
   mongodb:
     image: mongo
     command: --replSet rs0
-    environment:
-      - MONGO_INITDB_DATABASE=next-typegoose-auth-template
     ports:
       - 27017:27017
     volumes:
