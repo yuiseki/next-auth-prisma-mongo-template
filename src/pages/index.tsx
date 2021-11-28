@@ -18,7 +18,8 @@ const Home: NextPage = () => {
           {loading && <>Loading...</>}
           {session && (
             <>
-              Signed in as {session.user.name} <br />
+              Signed in as <img src={session.user.image} height={'20px'} />{' '}
+              {session.user.name}{' '}
               <button
                 onClick={() => {
                   signOut()
@@ -30,7 +31,7 @@ const Home: NextPage = () => {
           )}
           {!session && !loading && (
             <>
-              Not signed in <br />
+              Not signed in{' '}
               <button
                 onClick={() => {
                   signIn()
@@ -43,7 +44,7 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      <footer>
+      <footer style={{ position: 'absolute', bottom: 0, right: 0 }}>
         Powered by
         <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
           Next.js
@@ -71,6 +72,14 @@ const Home: NextPage = () => {
           rel="noopener noreferrer"
         >
           MongoDB
+        </a>
+        .{' '}
+        <a
+          href="https://github.com/yuiseki/next-auth-prisma-mongo-template"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Use it on GitHub!
         </a>
       </footer>
     </div>
