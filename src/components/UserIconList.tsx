@@ -9,18 +9,21 @@ export const UserIconList = () => {
   if (error) return <div>Failed to load</div>
 
   return (
-    <div style={{ margin: '5px 0' }}>
-      {data.map((user) => {
-        return (
-          <img
-            alt={user.name}
-            title={user.name}
-            key={user.id}
-            src={user.image}
-            height={'40px'}
-          />
-        )
-      })}
-    </div>
+    <>
+      <h2>Users: </h2>
+      <div style={{ margin: '5px 0' }}>
+        {data.map((user) => {
+          return (
+            <img
+              alt={user.name}
+              title={user.name}
+              key={user.id}
+              src={user.image}
+              height={'80px'}
+            />
+          )
+        })}
+      </div>
+    </>
   )
 }
