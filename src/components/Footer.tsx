@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <footer style={{ position: 'absolute', bottom: 0, right: 0 }}>
-      Powered by
+      Powered by{' '}
       <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
         Next.js
       </a>
