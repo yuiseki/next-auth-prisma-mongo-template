@@ -6,7 +6,12 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  const user = await prisma.user.findMany()
+  const user = await prisma.user.findMany({
+    take: 100,
+    orderBy: {
+      updatedAt: 'desc',
+    },
+  })
   res.status(200).json(user)
 }
 
