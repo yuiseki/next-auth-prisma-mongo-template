@@ -1,0 +1,38 @@
+version: '3.9'
+services:
+  mongodb:
+    image: mongo
+    command: --replSet rs0
+    environment:
+      - MONGO_INITDB_DATABASE=next-typegoose-auth-template
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+    restart: unless-stopped
+    networks:
+      - next
+  next:
+    build: .
+    command: bash -c "prisma generate && npm run dev"
+    env_file:
+      - .env.local
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+      - bundle:/bundle
+    depends_on:
+      - mongodb
+    networks:
+      - next
+
+volumes:
+  mongodb:
+    driver: local
+  bundle:
+    driver: local
+
+networks:
+  next:
+    name: next
