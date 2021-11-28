@@ -1,9 +1,13 @@
 {
   "private": true,
+  "engines": {
+    "node": "16.13.0",
+    "npm": "8.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
