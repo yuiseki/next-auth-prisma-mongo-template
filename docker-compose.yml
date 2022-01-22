@@ -23,7 +23,6 @@ services:
       - 3000:3000
     volumes:
       - .:/app
-      - bundle:/bundle
     depends_on:
       - mongodb
     networks:
@@ -31,8 +30,6 @@ services:
 
 volumes:
   mongodb:
-    driver: local
-  bundle:
     driver: local
 
 networks:
