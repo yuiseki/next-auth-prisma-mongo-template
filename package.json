@@ -1,7 +1,7 @@
 {
   "private": true,
   "engines": {
-    "node": "16.13.0",
+    "node": "16.x",
     "npm": "8.x"
   },
   "scripts": {
@@ -28,10 +28,10 @@
     ]
   },
   "dependencies": {
-    "@next-auth/prisma-adapter": "^0.5.2-next.19",
-    "@prisma/client": "^3.5.0",
+    "@next-auth/prisma-adapter": "^1.0.3",
+    "@prisma/client": "^3.12.0",
     "next": "latest",
-    "next-auth": "^4.0.0-beta.7",
+    "next-auth": "^4.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "swr": "^1.0.1",
@@ -55,7 +55,7 @@
     "jest-watch-typeahead": "^0.6.1",
     "lint-staged": "^10.0.10",
     "prettier": "^2.0.2",
-    "prisma": "^3.5.0",
+    "prisma": "^3.12.0",
     "typescript": "^4.5.2"
   }
 }
