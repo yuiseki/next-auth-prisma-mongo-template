@@ -27,7 +27,7 @@ export const SignInStatus = () => {
               signIn()
             }}
           >
-            Sign in
+            Sign in with Twitter (Read only)
           </button>
         </>
       )}
