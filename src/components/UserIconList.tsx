@@ -20,6 +20,7 @@ export const UserIconList = () => {
               key={user.id}
               src={user.image}
               height={'80px'}
+              width={'80px'}
             />
           )
         })}

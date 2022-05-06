@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer style={{ position: 'absolute', bottom: 0, right: 0 }}>
+    <footer style={{ position: 'absolute', bottom: 10, left: 10 }}>
       Powered by{' '}
       <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
         Next.js
@@ -29,13 +29,13 @@ export const Footer = () => {
       >
         MongoDB
       </a>
-      .{' '}
+      . <br />
       <a
         href="https://github.com/yuiseki/next-auth-prisma-mongo-template"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Use it on GitHub!
+        Use this template on GitHub!
       </a>
     </footer>
   )

@@ -9,7 +9,7 @@ export const SignInStatus = () => {
       {session && (
         <>
           Signed in as <img src={session.user.image} height={'20px'} />{' '}
-          {session.user.name}{' '}
+          {session.user.name}.{' '}
           <button
             onClick={() => {
               signOut()
@@ -21,7 +21,7 @@ export const SignInStatus = () => {
       )}
       {!session && !loading && (
         <>
-          Not signed in{' '}
+          Not signed in.{' '}
           <button
             onClick={() => {
               signIn()
