@@ -56,6 +56,6 @@
     "lint-staged": "^10.0.10",
     "prettier": "^3.0.0",
     "prisma": "^3.12.0",
-    "typescript": "^4.5.2"
+    "typescript": "^5.0.0"
   }
 }
