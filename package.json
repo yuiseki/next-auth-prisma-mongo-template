@@ -52,7 +52,7 @@
     "husky": "^4.2.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.4",
-    "jest-watch-typeahead": "^0.6.1",
+    "jest-watch-typeahead": "^2.0.0",
     "lint-staged": "^10.0.10",
     "prettier": "^2.0.2",
     "prisma": "^3.12.0",
