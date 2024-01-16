@@ -49,7 +49,7 @@
     "eslint": "^7.19.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.19.0",
-    "husky": "^4.2.3",
+    "husky": "^8.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.4",
     "jest-watch-typeahead": "^2.0.0",
