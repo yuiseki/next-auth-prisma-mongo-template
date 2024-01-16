@@ -1,8 +1,8 @@
 {
   "private": true,
   "engines": {
-    "node": "20.x",
-    "npm": "8.x"
+    "node": "18.x",
+    "npm": "9.x"
   },
   "scripts": {
     "dev": "next dev",
