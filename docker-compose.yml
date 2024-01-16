@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   mongodb:
-    image: mongo:4
+    image: mongo:7
     healthcheck:
       test: test $$(echo "rs.initiate({_id:'rs0',members:[{_id:0,host:\"mongodb:27017\"}]}).ok || rs.status().ok" | mongo --quiet) -eq 1
       interval: 30s
