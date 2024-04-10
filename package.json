@@ -39,7 +39,7 @@
     "tsconfig-paths": "^4.0.0"
   },
   "devDependencies": {
-    "@testing-library/react": "^11.2.5",
+    "@testing-library/react": "^15.0.0",
     "@types/jest": "^29.0.0",
     "@types/node": "^20.0.0",
     "@types/react": "^18.0.0",
