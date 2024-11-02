@@ -1,4 +1,4 @@
-FROM node:20.18.0
+FROM node:22.11.0
 
 WORKDIR /app
 ENV PATH ./node_modules/.bin:$PATH
